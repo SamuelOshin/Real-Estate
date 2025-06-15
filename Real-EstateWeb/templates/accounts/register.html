@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{% static 'css/all.css' %}">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <!-- Custom -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/choices.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/materialdesignicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/tobii.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/tiny-slider.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+  <link rel="stylesheet" href="https://unpkg.com/feather-icons/dist/feather.css">
+  <!-- Lightbox -->
+  <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.min.css" integrity="sha512-/k658G6UsCvbkGRB3vPXpsPHgWeduJwiWGPCGS14IQw3xpr63AEMdA8nMYG2gmYkXitQxDTn6iiK/2fD4T87qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>BT Real Estate | Account Signup </title>
+</head>
+
+<body>
+
+<section id="register" class="bg-home zoom-image d-flex align-items-center">
+  <div class="bg-overlay image-wrap" style="background: url('/static/img/1.jpg') center;"></div>
+  <div class="bg-overlay bg-gradient-overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="p-4 bg-white rounded-3 shadow-md mx-auto w-100" style="max-width: 400px;">
+            <!-- <div class="card-header">
+              <h4>
+                <i class="fas fa-user-plus"></i> Register</h4>
+            </div> -->
+            
+              <!-- Alerts -->
+              {% include 'partials/_alerts.html' %}
+              <form action="{% url 'register' %}" method="POST">
+                  {% csrf_token %}
+                  <h5 class="mb-3 ">Create Account</h5>
+                  <div class="form-group">
+                      <label for="first_name">First Name</label>
+                      <input type="text" name="first_name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="last_name">Last Name</label>
+                      <input type="text" name="last_name" class="form-control" required>
+                    </div>
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input type="text" name="username" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="password2">Password</label>
+                  <input type="password" name="password" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="password">Confirm Password</label>
+                  <input type="password" name="password2" class="form-control" required>
+                </div>
+                <button class="btn btn-primary w-100 mt-3" type="submit">Register</button>
+              </form>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
+  <script src="{% static 'js/bootstrap.bundle.min.js' %} "></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    feather.replace(); // Initialize Feather icons
+  </script>
+  <script src="{% static 'js/lightbox.min.js' %} "></script>
+  <script src="{% static 'js/main.js' %} "></script>
+  <script src="{% static 'js/app.js' %} "></script>
+  <script src="{% static 'js/feather.min.js' %} "></script>
+  <script src="{% static 'js/swiper.min.js' %} "></script>
+  <script src="{% static 'js/tiny-slider.js' %} "></script>
+  <script src="{% static 'js/tobii.js' %} "></script>
+  <script src="{% static 'js/plugins.init.js' %} "></script>
+</body>
+
+</html>
